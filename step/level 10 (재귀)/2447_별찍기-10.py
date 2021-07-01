@@ -42,6 +42,8 @@
 #         return result
 # main()
 
+
+# 아 짜증나 ㅋㅋ
 def concatenate(r1, r2):
     return [''.join(x) for x in zip(r1, r2, r1)] # *** 맨위 아래
 
