@@ -22,14 +22,15 @@
 
 # 숫자가 0으로 시작할 수 있다는게.. 01 09 이딴거였음
 # 너무 바보처럼 짠거같은데.. ㅋㅋ
-a = input()
-l = a.split('-')                            # - 기준으로 리스트 만들고
-l = list(map(lambda x: x.split('+'), l))    # 요소들을 다시 + 기준으로 리스트화. (2차원)
+a = input().split('-')
+l = [list(map(int, i.split('+'))) for i in a]
 for i,v in enumerate(l):
     if len(v) > 1 : l[i] = [str(sum(map(int, l[i])))]  # 0으로 시작되는 문자형 숫자 제거를 위해 int변환후 연산후 문자변환
     else : l[i] = [str(sum(map(int, l[i])))]           # 마찬가지로 int -> str
-l = sum(l, [])
+l = sum(l, []) # 2차원을 1차원으로
 print(eval('-'.join(l)))
+
+
 
 # 55-50+40-10+30+100
 # 55-50+40-(10+30+100)
