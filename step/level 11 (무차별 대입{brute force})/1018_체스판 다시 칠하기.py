@@ -37,7 +37,6 @@ print()
 # print(res)
 
 # 결국 풀이를 봤습니다........
-res = None
 z = []
 for i in range(m-7):             # 세로줄 8개씩 더 탐색할 반복수
     for k in range(n -7):        # 가로줄 8개씩 더 탐색할 반복수
